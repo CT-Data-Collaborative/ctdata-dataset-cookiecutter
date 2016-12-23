@@ -1,0 +1,21 @@
+{
+    "dataset_name": "Project Name",
+    "dataset_name_slug": "{{ cookiecutter.dataset_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+    "creation_date": "12/24/2016",
+    "author_name": "Sasha Cuerda",
+    "email": "you@example.com",
+    "description": "A short description of the project.",
+    "domain_name": "example.com",
+    "version": "0.1.0",
+    "timezone": "UTC",
+    "dataset_description": "Description of dataset",
+    "dataset_full_description": "Expanded description",
+    "dataset_source": ["US Census", "CTSDE", "CTDPH"],
+    "dataset_domain": "Data domain (top level)",
+    "dataset_subdomain": "Topic within top level domain",
+    "dataset_frequency": ["Annual", "Biannual", "Monthly", "Daily", "Other"],
+    "dataset_geography": ["Town", "County", "Town/County", "Other"],
+    "dataset_technical_notes": "Technical notes for advanced users",
+    "dataset_latest_year": "Latest year available",
+    "suppress_raw_data": "n"
+}
