@@ -2,7 +2,7 @@
 
 {{ cookiecutter.description }}
 
-:License: {{cookiecutter.open_source_license}}
+## License MIT
 
 ## Getting Setup
 
