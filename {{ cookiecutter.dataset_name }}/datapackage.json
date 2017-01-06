@@ -1,0 +1,134 @@
+{
+  "name": "{{ cookiecutter.dataset_name_slug }}",
+  "datapackage_version": "1.0-beta.18",
+  "title": "{{ cookiecutter.dataset_name }}",
+  "description": "{{ cookiecutter.dataset_description }}",
+  "version": "1.0",
+  "licenses": [{
+    "url": "http://opendatacommons.org/licenses/pddl/",
+    "name": "Open Data Commons Public Domain",
+    "version": "1.0",
+    "id": "odc-pddl"
+  }],
+  "sources": [{
+    "name": "{{ cookiecutter.dataset_source }}",
+    "web": ""
+  }],
+  "author":[ {
+    "name": "{{ cookiecutter.author_name }}",
+    "email": "{{ cookiecutter.email }}",
+    "web": "http://ctdata.org"
+  }],
+  "contributor": [],
+  "resources": [
+    {
+      "path": "data/data.csv",
+      "format": "csv",
+      "schema": {
+        "fields": [
+          {
+            "name": "{{ cookiecutter.dataset_geography }}",
+            "type": "string",
+            "constraints": {
+              "enum": ["Town", "County", "Town/County", "District", "Other"]
+            },
+            "dimension": false
+          },
+          {
+            "name": "FIPS",
+            "type": "string",
+            "dimension": false
+          },
+          {
+            "name": "Year",
+            "type": "string",
+            "dimension": false
+          },
+          {
+            "name": "Measure Type",
+            "type": "string",
+            "dimension": true
+          },
+          {
+            "name": "Variable",
+            "type": "string",
+            "dimension": false
+          },
+          {
+            "name", "Value",
+            "type": "number",
+            "dimension": false
+          }
+        ]
+      }
+    }
+  ],
+  "last_modified": "{{ cookiecutter.creation_date",
+  "ckan_extras": {
+    "full_description": {
+      "ckan_name": "Full Description",
+      "value": "{{ cookiecutter.dataset_full_description }}",
+      "type": "string",
+    },
+    "suppression": {
+      "ckan_name": "Suppression",
+      "value": "",
+      "type": "string"
+    },
+    "technical_notes": {
+      "ckan_name": "Technical Notes",
+      "value": "{{ cookiecutter.dataset_technical_notes }}",
+      "type": "string",
+    },
+    "domain": {
+      "ckan_name": "Domain",
+      "value": "{{ cookiecutter.dataset_domain }}",
+      "type": "string",
+    },
+    "subdomain": {
+      "ckan_name": "Subdomain",
+      "value": "{{ cookiecutter.dataset_subdomain }}",
+      "type": "string",
+    },
+    "geography": {
+      "ckan_name": "Geography",
+      "value": "{{ cookiecutter.dataset_geography }}",
+      "type": "string",
+      "constraints": {
+        "enum": ["Town", "County", "Town/County", "District", "Other"]
+      }
+    },
+    "frequency": {
+      "ckan_name": "Frequency",
+      "value": "{{ cookiecutter.dataset_frequency }}"
+      "type": "string"
+    },
+    "years_in_catalog": {
+      "ckan_name": "Years in Catalog",
+      "value": []
+      "type": "array",
+    },
+    "latest_year": {
+      "ckan_name": "Latest Year Available from Source",
+      "value": "{{ cookiecutter.dataset_latest_year }}"
+      "type": "string",
+    },
+    "disabled_views": {
+      "ckan_name": "Disabled Views",
+      "value": [],
+      "type": "array",
+      "constraings": {
+        "enum": ["map", "table", "bar", "line"]
+      }
+    },
+    "units": {
+      "ckan_name": "Units",
+      "value": {
+        "Number": "",
+        "Percent": "%"
+      }
+    }
+    "default": {},
+  },
+  "spot_tests": []
+}

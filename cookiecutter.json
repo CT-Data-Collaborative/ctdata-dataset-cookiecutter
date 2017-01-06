@@ -14,9 +14,8 @@
     "dataset_domain": "Data domain (top level)",
     "dataset_subdomain": "Topic within top level domain",
     "dataset_frequency": ["Annual", "Biannual", "Monthly", "Daily", "Other"],
-    "dataset_geography": ["Town", "County", "Town/County", "Other"],
+    "dataset_geography": ["Town", "County", "Town/County", "District", "Other"],
     "dataset_technical_notes": "Technical notes for advanced users",
     "dataset_latest_year": "Latest year available",
     "suppress_raw_data": "n",
-    "disabled_views": "Disable any views?"
 }
