@@ -55,7 +55,7 @@
             "dimension": false
           },
           {
-            "name", "Value",
+            "name": "Value",
             "type": "number",
             "dimension": false
           }
@@ -110,7 +110,7 @@
     },
     "latest_year": {
       "ckan_name": "Latest Year Available from Source",
-      "value": "{{ cookiecutter.dataset_latest_year }}"
+      "value": "{{ cookiecutter.dataset_latest_year }}",
       "type": "string",
     },
     "disabled_views": {
@@ -127,8 +127,9 @@
         "Number": "",
         "Percent": "%"
       }
-    }
+    },
     "default": {},
   },
-  "spot_tests": []
+  "spot_tests": [],
+  "dimension_groups": []
 }
