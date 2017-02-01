@@ -17,5 +17,5 @@
     "dataset_geography": ["Town", "County", "Town/County", "District", "Other"],
     "dataset_technical_notes": "Technical notes for advanced users",
     "dataset_latest_year": "Latest year available",
-    "suppress_raw_data": "n",
+    "suppress_raw_data": "n"
 }
