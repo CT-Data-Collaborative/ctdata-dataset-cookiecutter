@@ -63,7 +63,7 @@
       }
     }
   ],
-  "last_modified": "{{ cookiecutter.creation_date",
+  "last_modified": "{{ cookiecutter.creation_date }}",
   "ckan_extras": {
     "full_description": {
       "ckan_name": "Full Description",
