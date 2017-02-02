@@ -100,7 +100,7 @@
     },
     "frequency": {
       "ckan_name": "Frequency",
-      "value": "{{ cookiecutter.dataset_frequency }}"
+      "value": "{{ cookiecutter.dataset_frequency }}",
       "type": "string"
     },
     "years_in_catalog": {
