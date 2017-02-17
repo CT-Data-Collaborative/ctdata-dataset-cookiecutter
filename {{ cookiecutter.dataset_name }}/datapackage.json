@@ -29,9 +29,6 @@
           {
             "name": "{{ cookiecutter.dataset_geography }}",
             "type": "string",
-            "constraints": {
-              "enum": ["Town", "County", "Town/County", "District", "Other"]
-            },
             "dimension": false
           },
           {
@@ -52,7 +49,7 @@
           {
             "name": "Variable",
             "type": "string",
-            "dimension": false
+            "dimension": true
           },
           {
             "name": "Value",
@@ -105,11 +102,11 @@
     },
     "years_in_catalog": {
       "ckan_name": "Years in Catalog",
-      "value": []
+      "value": [],
       "type": "array",
     },
     "latest_year": {
-      "ckan_name": "Latest Year Available from Source",
+      "ckan_name": "Latest Year Available",
       "value": "{{ cookiecutter.dataset_latest_year }}",
       "type": "string",
     },
@@ -131,5 +128,8 @@
     "default": {},
   },
   "spot_tests": [],
-  "dimension_groups": []
+  "dimension_groups": [
+    {'Measure Type': ''},
+    {'Variable': ''}
+  ]
 }

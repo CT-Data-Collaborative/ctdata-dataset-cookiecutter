@@ -1,5 +1,7 @@
 {{ cookiecutter.dataset_name }}
 
+[![BUILD Status](https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}}.svg?branch=master)(https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}})
+
 {{ cookiecutter.description }}
 
 ## License MIT
@@ -20,13 +22,18 @@ for us.
 We use git as our VCS. In most cases we can commit our full processing directory, but in cases where we are responsible 
 for data suppression, we specifically exclude raw files from version control.
 
-
 ### Virtual Environments
 
 Processing typically happens in either Python or R. However, testing is done with Python. We recommend setting up a 
 virtual environment for managing any specific dependencies for testing a given dataset as follow:
 
+For Python >= 3.6:
+
 `python3 -m venv /path/to/new/virtual/environment`
+
+For Python <= 3.5:
+
+'virtualenv -p python3 venv'
 
 You can then install the requirements like so:
 
@@ -107,5 +114,19 @@ percentages sum to 1 (or 100 depending on formatting).
 
 ### Deployment
 
-We use travis-ci to automate publication of datasets to our CKAN installation. Deployment will only occur on the master 
-branch and requires 100% testing success.
+We use a custom CLI tool to publish datasets to our CKAN installation. This CLI is setup in the requirements.txt file and will be installed
+upon the creation of the virtual environment.
+
+Deployment should only take place when testing is complete and test coverage is 100%.
+
+The standard publish command is:
+
+`$ publish --ckan <ckan-url> --datapackage <path-to-datapackage.json> --ckanapikey <your-ckan-apikey>`
+
+The ckan url and the ckan api key can be read from environment variables named `CKANURL` and `CKANAPIKEY` respectively.
+
+In that case, the publish command is much simpler:
+
+`$ publish --datapackage <path-to-datapackage.json>`
+
+The path that is passed in should be a relative path from the current directory.
