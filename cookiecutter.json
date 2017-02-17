@@ -1,6 +1,6 @@
 {
     "dataset_name": "Project Name",
-    "dataset_name_slug": "{{ cookiecutter.dataset_name.lower()|replace(' ', '_')|replace('-', '_') }}",
+    "dataset_name_slug": "{{ cookiecutter.dataset_name.lower()|replace(' ', '-') }}",
     "creation_date": "2/17/2016",
     "author_name": "Sasha Cuerda",
     "email": "you@example.com",
