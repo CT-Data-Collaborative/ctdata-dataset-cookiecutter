@@ -1,5 +1,5 @@
 pytest=3.0.5
 requests=2.16.0
 datapackage
--e https://github.com/CT-Data-Collaborative/pytest-ctdata-datatpackage.git#egg=pytest-ctdata-datapackage
--e https://github.com/CT-Data-Collaborative/ctdata-ckan-pubish.git#egg=ctdata-ckan-publish
+-e git+https://github.com/CT-Data-Collaborative/pytest-ctdata-datatpackage.git#egg=pytest-ctdata-datapackage
+-e git+https://github.com/CT-Data-Collaborative/ctdata-datapackage-publisher.git#egg=ctdata-datapackage-publisher

@@ -1,7 +1,6 @@
 {{ cookiecutter.dataset_name }}
 
-[![BUILD Status](https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}}.svg?branch=master)(https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}})
-
+[![Build Status](https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}}.svg?branch=master)](https://travis-ci.org/CT-Data-Collaborative/{{cookiecutter.repository_name}})
 {{ cookiecutter.description }}
 
 ## License MIT
