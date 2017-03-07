@@ -9,6 +9,8 @@
     "repository_name": "",
     "version": "0.1.0",
     "timezone": "UTC",
+    "socrata": false,
+    "socrata_dataset_url": "",
     "dataset_description": "Description of dataset",
     "dataset_full_description": "Expanded description",
     "dataset_source": ["uscensus", "ctsde", "ctdph", "ctopm", "samhsa", "ctdmhas", "municipalities", "ctdss", "ctdol", "ctdecd",

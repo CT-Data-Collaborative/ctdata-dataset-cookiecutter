@@ -14,49 +14,41 @@
     "name": "{{ cookiecutter.dataset_source }}",
     "web": ""
   }],
-  "author":[ {
+  "author":[{
     "name": "{{ cookiecutter.author_name }}",
     "email": "{{ cookiecutter.email }}",
     "web": "http://ctdata.org"
   }],
   "contributor": [],
-  "resources": [
-    {
-      "path": "data/data.csv",
-      "format": "csv",
-      "schema": {
-        "fields": [
-          {
-            "name": "{{ cookiecutter.dataset_geography }}",
-            "type": "string",
-            "dimension": false
-          },
-          {
-            "name": "FIPS",
-            "type": "string",
-            "dimension": false
-          },
-          {
-            "name": "Year",
-            "type": "string",
-            "dimension": false
-          },
-          {
-            "name": "Measure Type",
-            "type": "string",
-            "dimension": true
-          },
-          {
-            "name": "Variable",
-            "type": "string",
-            "dimension": true
-          },
-          {
-            "name": "Value",
-            "type": "number",
-            "dimension": false
-          }
-        ]
+  "resources": [{
+    "path": "data/data.csv",
+    "format": "csv",
+    "schema": {
+      "fields": [{
+          "name": "{{ cookiecutter.dataset_geography }}",
+          "type": "string",
+          "dimension": false
+        }, {
+          "name": "FIPS",
+          "type": "string",
+          "dimension": false
+        }, {
+          "name": "Year",
+          "type": "string",
+          "dimension": false
+        }, {
+          "name": "Measure Type",
+          "type": "string",
+          "dimension": true
+        }, {
+          "name": "Variable",
+          "type": "string",
+          "dimension": true
+        }, {
+          "name": "Value",
+          "type": "number",
+          "dimension": false
+        }]
       }
     }
   ],
@@ -65,7 +57,7 @@
     "full_description": {
       "ckan_name": "Full Description",
       "value": "{{ cookiecutter.dataset_full_description }}",
-      "type": "string",
+      "type": "string"
     },
     "suppression": {
       "ckan_name": "Suppression",
@@ -75,25 +67,33 @@
     "technical_notes": {
       "ckan_name": "Technical Notes",
       "value": "{{ cookiecutter.dataset_technical_notes }}",
-      "type": "string",
+      "type": "string"
     },
+    "socrata": {
+      "ckan_name": "Socrata",
+      "value": "{{ cookiecutter.socrata }}",,
+      "type": "string"
+    },{% if cookiecutter.socrata %}
+    "socrata_url": {
+      "ckan_name": "Socrata Dataset URL",
+      "value": "{{ cookiecutter.socrata_dataset_url }}",,
+      "type": "string"
+    },{% endif %}
     "domain": {
       "ckan_name": "Domain",
       "value": "{{ cookiecutter.dataset_domain }}",
-      "type": "string",
+      "type": "string"
     },
     "subdomain": {
       "ckan_name": "Subdomain",
       "value": "{{ cookiecutter.dataset_subdomain }}",
-      "type": "string",
+      "type": "string"
     },
     "geography": {
       "ckan_name": "Geography",
       "value": "{{ cookiecutter.dataset_geography }}",
       "type": "string",
-      "constraints": {
-        "enum": ["Town", "County", "Town/County", "District", "Other"]
-      }
+      "constraints": {"enum": ["Town", "County", "Town/County", "District", "Other"]}
     },
     "frequency": {
       "ckan_name": "Frequency",
@@ -103,20 +103,18 @@
     "years_in_catalog": {
       "ckan_name": "Years in Catalog",
       "value": [],
-      "type": "array",
+      "type": "array"
     },
     "latest_year": {
       "ckan_name": "Latest Year Available",
       "value": "{{ cookiecutter.dataset_latest_year }}",
-      "type": "string",
+      "type": "string"
     },
     "disabled_views": {
       "ckan_name": "Disabled Views",
       "value": [],
       "type": "array",
-      "constraings": {
-        "enum": ["map", "table", "bar", "line"]
-      }
+      "constraints": {"enum": ["map", "table", "bar", "line"]}
     },
     "units": {
       "ckan_name": "Units",
@@ -125,11 +123,11 @@
         "Percent": "%"
       }
     },
-    "default": {},
+    "default": {}
   },
-  "spot_tests": [],
+  "spot_checks": [],
   "dimension_groups": [
-    {'Measure Type': ''},
-    {'Variable': ''}
+    {"Measure Type": []},
+    {"Variable": []}
   ]
 }

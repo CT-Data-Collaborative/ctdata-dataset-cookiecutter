@@ -1,7 +1,5 @@
-library(stringr)
-library(reshape2)
-library(data.table)
-library(plyr)
+library(dplyr)
+library(datapkg)
 
 ##################################################################
 #
