@@ -10,6 +10,7 @@
     "version": "0.1.0",
     "timezone": "UTC",
     "socrata": false,
+    "socrata_dataset_name": "",
     "socrata_dataset_url": "",
     "dataset_description": "Description of dataset",
     "dataset_full_description": "Expanded description",

@@ -81,7 +81,7 @@ The final extra property that should be present is an array of spot check tests 
       "field3": "field_name",
     },
     "expected_value": {
-      "value": value_as_a_numeric,
+      "value": "value_as_a_numeric",
       "type": "integer"
     }
   }

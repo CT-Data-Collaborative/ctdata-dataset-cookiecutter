@@ -71,14 +71,18 @@
     },
     "socrata": {
       "ckan_name": "Socrata",
-      "value": "{{ cookiecutter.socrata }}",,
+      "value": "{{ cookiecutter.socrata }}",
       "type": "string"
     },{% if cookiecutter.socrata %}
     "socrata_url": {
       "ckan_name": "Socrata Dataset URL",
-      "value": "{{ cookiecutter.socrata_dataset_url }}",,
+      "value": "{{ cookiecutter.socrata_dataset_url }}",
       "type": "string"
-    },{% endif %}
+    },"0socrata_dataset_name": {
+      "ckan_name": "Socrata Dataset Name",
+      "value": "{{ cookiecutter.socrata_dataset_name }}",
+      "type": "string"
+    }, {% endif %}
     "domain": {
       "ckan_name": "Domain",
       "value": "{{ cookiecutter.dataset_domain }}",
