@@ -1,5 +1,5 @@
 {
-  "name": "{{ cookiecutter.dataset_name_slug }}",
+  "name": "{{ cookiecutter.repository_name }}",
   "datapackage_version": "1.0-beta.18",
   "title": "{{ cookiecutter.dataset_name }}",
   "description": "{{ cookiecutter.dataset_description }}",
@@ -39,11 +39,17 @@
         }, {
           "name": "Measure Type",
           "type": "string",
-          "dimension": true
+          "dimension": true,
+          "constraints": {
+            "enum": []
+          }
         }, {
           "name": "Variable",
           "type": "string",
-          "dimension": true
+          "dimension": true,
+          "constraints": {
+            "enum": []
+          }
         }, {
           "name": "Value",
           "type": "number",
@@ -73,16 +79,19 @@
       "ckan_name": "Socrata",
       "value": "{{ cookiecutter.socrata }}",
       "type": "string"
-    },{% if cookiecutter.socrata %}
+    },
+    {% if cookiecutter.socrata %}
     "socrata_url": {
       "ckan_name": "Socrata Dataset URL",
       "value": "{{ cookiecutter.socrata_dataset_url }}",
       "type": "string"
-    },"0socrata_dataset_name": {
+    },
+    "socrata_dataset_name": {
       "ckan_name": "Socrata Dataset Name",
       "value": "{{ cookiecutter.socrata_dataset_name }}",
       "type": "string"
-    }, {% endif %}
+    }, 
+    {% endif %}
     "domain": {
       "ckan_name": "Domain",
       "value": "{{ cookiecutter.dataset_domain }}",
@@ -127,11 +136,42 @@
         "Percent": "%"
       }
     },
-    "default": {}
+    "expected_number_of_geographies": {
+      "ckan_name": "Expected Number of Unique Geographies",
+      "value": [],
+       "type": "string"
+      },  
+    "default": {      
+      "ckan_name": "Default",
+      "value": {
+       "{{ cookiecutter.dataset_geography }}": [], 
+        "Year": "{{ cookiecutter.dataset_latest_year }}",
+        "Measure Type": [],
+        "Variable": []
+      },
+      "type": "object"
+    }  
   },
-  "spot_checks": [],
+  "spot_checks": [
+    {
+      "type": "$lookup",
+      "filter": {
+        "{{ cookiecutter.dataset_geography }}": [],
+        "Year": [],
+        "Variable": [],
+        "Measure Type": [] 
+      },
+      "expected": {
+        "type": "$match",
+        "number type": [],
+        "value": []
+      } 
+    },
+  ],
   "dimension_groups": [
-    {"Measure Type": []},
-    {"Variable": []}
+    {
+      "Measure Type": [],
+      "Variable": []
+    }
   ]
 }
